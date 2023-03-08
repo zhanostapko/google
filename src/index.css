@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#overlay {
+  background-image: url("./Assets/Images/overlay.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+#map,
+#overlay {
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: "venti";
+  src: url("./Assets/Fonts/venticf-bold-webfont.woff2") format("woff2"),
+    url("./Assets/Fonts/venticf-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ventiMedium";
+  src: url("./Assets/Fonts/VentiCF-Medium.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.gm-style .gm-style-iw-c {
+  background: transparent;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  font-size: 16px;
+  font-family: "venti";
+  color: #fff;
+}
+
+.gm-style-iw-d {
+  overflow: hidden !important;
+}
+.gm-style .gm-style-iw-t::after {
+  content: none;
+}
+
+.gm-style .gm-style-iw-tc::after {
+  display: none;
+}
+
+#info_container {
+  /* padding: 10px; */
+}
+
+.colorContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  border-radius: 4px;
+}
+
+.colorContainer--grey {
+  background: linear-gradient(
+    34deg,
+    rgba(24, 15, 81, 0.6) 65%,
+    rgba(140, 140, 140, 0.5) 100%
+  );
+  border-left: 4px solid rgb(140, 140, 140);
+}
+
+.colorContainer--green {
+  background: linear-gradient(
+    34deg,
+    rgba(24, 15, 81, 0.9) 65%,
+    rgba(51, 170, 22, 0.5) 100%
+  );
+  border-left: 4px solid rgb(51, 170, 22);
+}
+
+.colorContainer--blue {
+  background: linear-gradient(
+    34deg,
+    rgba(24, 15, 81, 0.9) 65%,
+    rgba(24, 85, 219, 0.5) 100%
+  );
+  border-left: 4px solid rgb(24, 85, 219);
+}
+
+.colorContainer--red {
+  background: linear-gradient(
+    34deg,
+    rgba(24, 15, 81, 0.9) 65%,
+    rgba(153, 22, 38, 0.5) 100%
+  );
+  border-left: 4px solid rgb(153, 22, 38);
+}
+
+#info_container.is-left .info_content {
+  padding: 5px 20px 0 0;
+}
+
+.info_content {
+  font-size: 10px;
+  /* padding: 3px 0 0 20px; */
+  padding: 5px 0 0 20px;
+  font-family: "ventiMedium";
+}
+
+.info_data_container {
+  background-color: red;
+}
+
+.gm-ui-hover-effect {
+  opacity: 0;
+}
+
+.gm-style-iw-t::before {
+  content: none;
+}
+
+.markerContainer {
+  position: relative;
+}
+
+.markerContainer > :nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.flagContainer {
+  display: flex;
+  /* gap: 1rem; */
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.flagWrapper {
+  padding: 0.3rem 0.6rem;
+  margin-right: 1rem;
+}
+.flagWrapper:last-child {
+  margin-right: 0;
+}
+.flagWrapper span {
+  margin-left: 0.5rem;
+}
+
+.prkg {
+  transform: rotate(90deg);
+  height: 24px;
+}
+
+.aircraftDetail {
+  padding: 2px 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.aircraftDetail p,
+.aircraftDetail span {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2px;
+}
+
+.aircraftDetail p {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+}
+
+.aircraftDetail span {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: 0.05em;
+}
